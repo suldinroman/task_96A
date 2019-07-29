@@ -2,19 +2,15 @@
 #include <algorithm>
 #include <string>
 
-int main()
-{
-    std::string playersPositions;
+int main(){
+	std::string plrsPos;
+	std::cin >> plrsPos;
 
-    std::cin >> playersPositions;
-
-    if (std::search_n(playersPositions.begin(), playersPositions.end(), 7, '0') != playersPositions.end() ||
-        std::search_n(playersPositions.begin(), playersPositions.end(), 7, '1') != playersPositions.end())
-	{
+	if(std::search_n(plrsPos.begin(), plrsPos.end(), 7, '0') != plrsPos.end() 
+	|| std::search_n(plrsPos.begin(), plrsPos.end(), 7, '1') != plrsPos.end())
 		std::cout << "YES" << std::endl;
-	}
 	else
-	{
 		std::cout << "NO" << std::endl;
-	}
+
+	return 0;
 }
